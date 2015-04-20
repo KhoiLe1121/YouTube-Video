@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="Site.css">
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-route.js"></script>
+    <script type="text/javascript" src="YouTubeVideo.js"></script>
+    <title>Khoi's favorite musics</title>
+</head>
+<body ng-app="YouTubeVideoApp">
+    <div id="direction">Choose your genre and I will show you my favorite songs in that genre!</div>
+    <form ng-submit="playVideo()" ng-controller="videoManager">
+        <select ng-model="myGenre" ng-options="genre.name for genre in genres">
+            <option value="">-- choose genre --</option>
+        </select>
+        <input type="submit" id="submitButton" value="Play" />
+    </form>
+    <div id="player"></div>
+
+</body>
+</html>
